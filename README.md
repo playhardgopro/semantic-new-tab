@@ -8,3 +8,4 @@ New tab extension
 * To test the extension in a temporary firefox profile, use the test script(`npm run test`)
 * To create the web-ext artifact for the extension, use the xpi script (`npm run xpi`)
 # semantic-new-tab
+# semantic-new-tab
