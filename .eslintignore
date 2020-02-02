@@ -1,0 +1,4 @@
+build/
+tests/
+node_modules/
+design/
