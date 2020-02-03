@@ -2,6 +2,10 @@
 
 ## [Link](https://addons.mozilla.org/ru/firefox/addon/semantic-new-tab) to install the extension
 
+## Customization
+
+Write your own style or use [themes](./THEMES.md)
+
 ## Screenshot
 
 ![](https://imgur.com/download/CwYTJoB)
