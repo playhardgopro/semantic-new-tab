@@ -4,34 +4,13 @@ body {
 	background-color: #f9f9fa;
 }
 
-// .container {
-// 	margin: auto;
-// 	padding-left: 10%;
-// 	padding-right: 10%;
-// 	padding-top: 2%;
-// }
-
-// .settings-button {
-// 	display: flex;
-// 	flex-flow: row nowrap;
-// 	justify-content: flex-end;
-// 	width: 100%;
-// }
-
-// .grid {
-// 	display: grid;
-// 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-// 	grid-row-gap: 20px;
-// 	margin: auto;
-// 	padding-top: 2%;
-// }
 .list-flex {
 	display: flex;
 }
 
 .settings-position {
 	display: flex;
-	flex-flow: row-reverse;
+	flex-flow: row-reverse nowrap;
 	margin-top: 14px;
 }
 
@@ -58,15 +37,9 @@ a {
 	}
 }
 
-// 	.thumbnail {
-// 		padding: 4px;
-// 		border: 1px solid #ddd;
-// 		border-radius: 10%;
-// 	}
-
-// 	.one:hover {
-// 		transform: scale(1.2);
-// 	}
+.thumbnail {
+	width: 128px;
+}
 
 // 	.customize {
 // 		display: inline-block;
