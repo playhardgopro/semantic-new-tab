@@ -1,5 +1,7 @@
 # Semantic New Tab
 
+![](https://imgur.com/download/ralU5hJ)
+
 ## Steps to build locally
 * Install web-ext (`sudo npm install -g web-ext`)
 * Run npm install in the react-new-tab-firefox directory to install all dependencies (`npm install`)
