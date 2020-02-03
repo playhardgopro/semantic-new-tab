@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
   filename: './css/style.css',
@@ -18,7 +20,6 @@ const NewTabHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   },
 });
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   {
