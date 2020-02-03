@@ -1,5 +1,4 @@
 # Semantic New Tab Themes
--------
 
 ## List of themes
 
@@ -19,7 +18,7 @@ body{
 ```
 
 #### Screenshot
-![](https://imgur.com/ZoHcl7I)
+![](https://imgur.com/download/ZoHcl7I)
 
 
 
