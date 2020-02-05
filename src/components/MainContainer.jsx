@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import { Container } from 'semantic-ui-react';
 import ListView from './ListView';
-import SettingsModal from './SettingsModal';
+import SettingsModal from './SettingsModal/SettingsModal';
 
 
 function getAllBookmarks(bookmarkTree, faviconServerURL) {

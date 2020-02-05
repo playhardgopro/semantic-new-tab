@@ -1,5 +1,6 @@
 node_modules/
 build/
 web-ext-artifacts/
+tests/
 .history/
 ./TEMPLATES.md

@@ -27,7 +27,7 @@ deployed on&nbsp;
           <a href="https://heroku.com">heroku</a>
 . In case you wish to host it yourself, please follow the instructions provided in the&nbsp;
           <a href="https://github.com/mat/besticon">favicon fetcher service</a>
-        &nbsp;and replace the domain in the text box below.
+        &nbsp;and replace the domain in the text box above.
         </Message>
       </Form>
     );

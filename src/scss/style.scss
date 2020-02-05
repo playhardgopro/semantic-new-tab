@@ -1,46 +1,63 @@
 body {
 	display: flex;
 	flex-flow: column;
-	background-color: #f9f9fa;
+	background-color: #ffffff;
 }
 
-.list-flex {
+.bookmarks-position {
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
 }
 
-.settings-position {
-	display: flex;
-	flex-flow: row-reverse nowrap;
-	margin-top: 14px;
+#bookmarks-list {
+	margin: auto;
 }
 
-.one {
-	margin: 30px;
+.bookmark {
 	display: block;
-	max-width: 150px;
+	margin: 16px;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	transition: transform 0.05s;
+	width: 128px;
+	transition: transform 0.1s;
 	&:hover {
 		transform: scale(1.2);
 	}
 }
 
+.bookmark-title {
+	text-overflow: ellipsis;
+}
+
 a {
 	text-decoration: none;
-	color: #242526;
+	color: #0b56a1;
 	&:hover {
-		color: #242526;
+		color: #05315e;
 	}
 	&:visited {
-		color: #242526;
+		color: #05315e;
 	}
 }
 
-.thumbnail {
-	width: 128px;
+.settings-position {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 14px;
+	justify-content: flex-end;
 }
 
+.settings-button {
+	color: #242526;
+}
+
+// #reactCss {
+// 	width: 300px;
+// 	height: 200px;
+// 	border: 1px solid #ccc;
+// 	padding: 5px;
+// }
 // 	.customize {
 // 		display: inline-block;
 // 		color: lightgray;

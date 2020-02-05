@@ -1,0 +1,77 @@
+import React, { PureComponent } from 'react';
+import { Tab, Message } from 'semantic-ui-react';
+
+const theme1 = `body {
+  background-color: pink;
+  // OR
+  background-image: url('https://source.unsplash.com/random/1920x1080');
+ 
+  background-repeat: no-repeat;
+  background-size: auto;
+}`;
+
+const theme2 = `#bookmarks-list {
+  width: 80%;
+  margin: auto;
+}
+.bookmarks-position {
+  justify-content: space-evenly;
+}
+.bookmark {
+  margin: 30px;
+  width: 64px;
+  border-radius: 20%;
+}
+.bookmark:hover {
+  transform: scale(1.5);
+}
+.bookmark-title {
+  font-size: 8px !important;
+  color: orange !important;
+}`;
+
+const theme3 = `.settings-position {
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+.settings-button {
+  color: purple;
+}`;
+
+const panes = [
+  {
+    menuItem: 'Background',
+    render: () => <Tab.Pane attached={false} content={<pre>{theme1}</pre>} />,
+  },
+  {
+    menuItem: 'Bookmarks',
+    render: () => <Tab.Pane attached={false} content={<pre>{theme2}</pre>} />,
+  },
+  {
+    menuItem: 'Settings icon',
+    render: () => <Tab.Pane attached={false} content={<pre>{theme3}</pre>} />,
+  },
+];
+
+
+export default class SettingsModalThemes extends PureComponent {
+  render() {
+    return (
+      <div>
+        <Tab menu={{ pointing: true }} panes={panes} />
+        <Message as="p">
+      To use pre-defined themes, please&nbsp;
+          <a
+            href="https://github.com/playhardgopro/semantic-new-tab/blob/master/THEMES.md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+      visit this link
+
+          </a>
+      .
+        </Message>
+      </div>
+    );
+  }
+}
