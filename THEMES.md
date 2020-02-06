@@ -10,6 +10,9 @@
 	- [Circular bookmark](#circular-bookmark)
 		- [Code](#code-1)
 		- [Screenshot](#screenshot-1)
+	- [Shadows](#shadows)
+		- [Code](#code-2)
+		- [Screenshot](#screenshot-2)
 
 ## Background Image
 
@@ -50,3 +53,32 @@ body {
 ### Screenshot
 
 ![](https://imgur.com/download/CwYTJoB)
+
+## Shadows
+
+### Code
+
+```css
+body {
+	background-image: url('https://images.unsplash.com/photo-1558980664-1db506751c6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+#bookmarks-list {
+	width: 70%;
+	margin: auto;
+}
+.bookmark {
+	background-color: #fdfdfd;
+	width: 128px;
+	border-radius: 18%;
+	box-shadow: 0 9px 15px 3px rgba(0, 0, 0, 0.55);
+}
+.settings-button {
+	color: #46402f;
+}
+```
+
+### Screenshot
+
+![](https://imgur.com/download/eiWk3nJ)

@@ -4,3 +4,4 @@ web-ext-artifacts/
 tests/
 .history/
 ./TEMPLATES.md
+*.todo
