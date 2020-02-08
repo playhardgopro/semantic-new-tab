@@ -1,5 +1,7 @@
-import React, { PureComponent } from 'react';
-import { Tab, Message } from 'semantic-ui-react';
+import React from 'react';
+import {
+  Tab, Message, Header, Divider, Icon,
+} from 'semantic-ui-react';
 
 const theme1 = `body {
   background-color: pink;
@@ -54,24 +56,30 @@ const panes = [
 ];
 
 
-export default class SettingsModalThemes extends PureComponent {
-  render() {
-    return (
-      <div>
-        <Tab menu={{ pointing: true }} panes={panes} />
-        <Message as="p">
-      To use pre-defined themes, please&nbsp;
-          <a
-            href="https://github.com/playhardgopro/semantic-new-tab/blob/master/THEMES.md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+export default function SettingsModalThemes() {
+  return (
+    <div>
+      <Divider horizontal>
+        <Header as="h3">
+          <Icon name="theme" size="small" />
+Themes
+        </Header>
+      </Divider>
+      <Header as="h4" content="Use these CSS classes to customize your own theme" />
+      <Tab menu={{ pointing: true }} panes={panes} />
+      <Message as="p">
+All values above are just examples.
+To use pre-defined themes, please&nbsp;
+        <a
+          href="https://github.com/playhardgopro/semantic-new-tab/blob/master/THEMES.md"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
       visit this link
 
-          </a>
+        </a>
       .
-        </Message>
-      </div>
-    );
-  }
+      </Message>
+    </div>
+  );
 }

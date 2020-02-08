@@ -1,7 +1,10 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
-import { Form, Label } from 'semantic-ui-react';
+import {
+  Form, Label, Header, Divider,
+} from 'semantic-ui-react';
 import SettingsModalFormFolder from './SettingsModalFormFolder';
+// import getAll from '../../helpers';
 
 const updateStyle = () => {
   const css = document.getElementById('reactCss').value;
@@ -9,17 +12,13 @@ const updateStyle = () => {
   window.location.reload();
 };
 
-function getAllFolders(allBookmarks) {
-  return allBookmarks.filter((bookmark) => (bookmark.type === 'folder'));
-}
-
 async function renderBookmarkFolder() {
   const prefs = await browser.storage.local.get();
   document.getElementById('serverDomain').value = prefs.faviconServerURL || 'https://icon-fetcher-go.herokuapp.com';
   const bookmark = await browser.bookmarks.get(prefs.bookmarkId || 'toolbar_____');
-  const allBookmarks = await browser.bookmarks.search({});
-  const allFolders = getAllFolders(allBookmarks);
-  ReactDOM.render(<SettingsModalFormFolder bookmark={bookmark[0]} folders={allFolders} />, document.getElementById('bookmark-folder'));
+  // const allItems = await browser.bookmarks.search({});
+  // const allFolders = getAll('folder', allItems);
+  ReactDOM.render(<SettingsModalFormFolder bookmark={bookmark[0]} />, document.getElementById('bookmark-folder'));
 }
 
 export default class SettingsModalFormStyle extends PureComponent {
@@ -35,6 +34,8 @@ export default class SettingsModalFormStyle extends PureComponent {
   render() {
     return (
       <Form id="styleForm" onSubmit={updateStyle}>
+        <Divider />
+        <Header as="h4" content="Custom CSS" />
         <Label pointing="below" content="This CSS will be added as a style tag in the head section of the document." />
         <Form.TextArea
           style={{ minHeight: 300 }}

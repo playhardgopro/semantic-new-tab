@@ -10,7 +10,7 @@ function getAllBookmarks(bookmarkTree, faviconServerURL) {
   for (let i = 0; i < bookmarkTree.length; i += 1) {
     const element = bookmarkTree[i];
     if ((typeof element.url !== 'undefined') && (element.url.startsWith('http'))) {
-      element.faviconURL = `${faviconServerURL}/icon?size=128&url=${element.url}`;
+      element.faviconURL = `${faviconServerURL}/icon?size=180&url=${element.url}`;
       bookmarks.push(element);
     } else if (typeof element.children !== 'undefined') {
       bookmarks.push(getAllBookmarks(element.children, faviconServerURL));
