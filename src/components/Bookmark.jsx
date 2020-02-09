@@ -40,7 +40,7 @@ export default class Bookmark extends Component {
 
 Bookmark.defaultProps = {
   title: 'Bookmark',
-  faviconURL: 'https://img2.freepng.ru/20180320/ore/kisspng-computer-icons-bookmark-favicon-icon-image-free-bookmark-5ab0c99bb94e37.849385561521535387759.jpg',
+  faviconURL: 'https://icon-fetcher-go.herokuapp.com/icon?size=180&url=https://www.mozilla.org/ru/firefox/central/',
 };
 
 

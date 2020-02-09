@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Header, Icon, Modal, Divider, Container,
+  Header, Icon, Modal, Container,
 } from 'semantic-ui-react';
 import SettingsModalFormStyle from './SettingsModalFormStyle';
 import SettingsModalFormServer from './SettingsModalFormServer';
@@ -15,7 +15,6 @@ export default function SettingsModal() {
         <SettingsModalThemes />
         <SettingsModalFormStyle />
         <SettingsModalFormServer />
-        <Divider />
         <Container textAlign="center">
           <Modal.Description as="a" href="https://addons.mozilla.org/ru/firefox/addon/semantic-new-tab/" content="Click here to visit addons.mozilla.org"></Modal.Description>
         </Container>
