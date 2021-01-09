@@ -8,6 +8,6 @@ require('esbuild').buildSync({
 	define: {
 		'process.env.NODE_ENV': '"production"',
 	},
-});
-require('fs').copyFileSync('./src/manifest.json', './build/manifest.json');
-require('fs').copyFileSync('./src/index.html', './build/index.html');
+})
+require('fs').copyFileSync('./src/manifest.json', './build/manifest.json')
+require('fs').copyFileSync('./src/index.html', './build/index.html')

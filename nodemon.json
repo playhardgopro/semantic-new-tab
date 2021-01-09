@@ -1,0 +1,11 @@
+{
+	"watch": [
+		"src"
+	],
+	"ignore": [
+		"src/**/*.test.ts"
+	],
+	"ext": "ts,tsx,mjs,js,json,html,css",
+	"exec": "node ./scripts/build.js",
+	"legacyWatch": true
+}
