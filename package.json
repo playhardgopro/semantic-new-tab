@@ -1,21 +1,35 @@
 {
-	"title": "Semantic new tab for Firefox",
 	"name": "custom-newtab-firefox",
 	"version": "0.1.0",
 	"description": "Customizable Semantic new tab extension",
+	"keywords": [
+		"new tab",
+		"firefox",
+		"semantic"
+	],
+	"homepage": "https://github.com/playhardgopro/semantic-new-tab#readme",
+	"bugs": {
+		"url": "https://github.com/playhardgopro/semantic-new-tab/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/playhardgopro/semantic-new-tab.git"
+	},
+	"license": "MIT",
 	"author": "Daniel Egortsev",
+	"main": "tsconfig.json",
 	"scripts": {
+		"build": "npm run clean && node ./scripts/build.js",
 		"clean": "rm -rf ./build",
 		"dev": "npx nodemon & npx web-ext run -s ./build",
-		"try:pre": "npx web-ext run -s ./build",
-		"try": "npm run build && npm run try:pre",
-		"build": "npm run clean && node ./scripts/build.js",
 		"lint": "npm run build && npx web-ext lint -s ./build",
+		"try": "npm run build && npm run try:pre",
+		"try:pre": "npx web-ext run -s ./build",
 		"xpi": "npm run build && npx web-ext build -s ./build"
 	},
 	"dependencies": {
 		"core-js": "^3.8.2",
-		"esbuild": "^0.8.29",
+		"esbuild": "^0.8.31",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"regenerator-runtime": "^0.13.7",
@@ -31,29 +45,15 @@
 		"@types/firefox-webext-browser": "^82.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
-		"@typescript-eslint/eslint-plugin": "^4.11.1",
-		"@typescript-eslint/parser": "^4.11.1",
+		"@typescript-eslint/eslint-plugin": "^4.12.0",
+		"@typescript-eslint/parser": "^4.12.0",
 		"eslint": "^7.17.0",
-		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-compat": "^3.9.0",
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-unicorn": "^25.0.1",
 		"nodemon": "^2.0.7"
 	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/playhardgopro/semantic-new-tab.git"
-	},
-	"keywords": [
-		"new tab",
-		"firefox",
-		"semantic"
-	],
-	"main": "tsconfig.json",
-	"bugs": {
-		"url": "https://github.com/playhardgopro/semantic-new-tab/issues"
-	},
-	"homepage": "https://github.com/playhardgopro/semantic-new-tab#readme"
+	"title": "Semantic new tab for Firefox"
 }
