@@ -10,8 +10,8 @@
 		"try:pre": "npx web-ext run -s ./build",
 		"try": "npm run build && npm run try:pre",
 		"build": "npm run clean && node ./scripts/build.js",
-		"lint": "npm run build && web-ext lint -s ./build",
-		"xpi": "npm run build && web-ext build -s ./build"
+		"lint": "npm run build && npx web-ext lint -s ./build",
+		"xpi": "npm run build && npx web-ext build -s ./build"
 	},
 	"dependencies": {
 		"core-js": "^3.8.2",
