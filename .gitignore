@@ -2,5 +2,3 @@ node_modules/
 build/
 web-ext-artifacts/
 .history/
-templates.md
-tests/
