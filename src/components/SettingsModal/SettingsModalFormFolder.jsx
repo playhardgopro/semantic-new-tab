@@ -35,20 +35,20 @@ async function onDeleteFolder() {
   const id = await browser.storage.local.get('allFolderId');
   if (typeof id.allFolderId !== 'undefined') {
     await browser.bookmarks.removeTree(id.allFolderId);
-    await browser.storage.local.remove(['allFolderId', 'bookmarkId']);
+    await browser.storage.local.remove(['allFolderId', 'shownFolderId']);
   }
 }
 
 const setBookmark = (value) => {
   const selectedOption = value;
-  browser.storage.local.set({ bookmarkId: selectedOption });
+  browser.storage.local.set({ shownFolderId: selectedOption });
 };
 
 
 export default class SettingsModalFormFolder extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { selectOptions: null };
+    this.state = { selectOptions: [] };
     this.updateSelect = this.updateSelect.bind(this);
   }
 
@@ -63,7 +63,6 @@ export default class SettingsModalFormFolder extends PureComponent {
       const selectOptions = folders.map(({ id, title }, i) => (
         { key: i, value: id, text: title }
       ));
-      // console.log(selectOptions, 'selectOptions');
       return { selectOptions };
     });
   }

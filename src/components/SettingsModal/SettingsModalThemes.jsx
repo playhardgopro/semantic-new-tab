@@ -5,18 +5,14 @@ import {
 
 const theme1 = `body {
   background-color: pink;
-  // OR
   background-image: url('https://source.unsplash.com/random/1920x1080');
- 
   background-repeat: no-repeat;
   background-size: auto;
 }`;
 
-const theme2 = `#bookmarks-list {
+const theme2 = `.bookmarks-position {
   width: 80%;
   margin: auto;
-}
-.bookmarks-position {
   justify-content: space-evenly;
 }
 .bookmark {

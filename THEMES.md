@@ -64,7 +64,7 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
-#bookmarks-list {
+.bookmarks-position {
 	width: 70%;
 	margin: auto;
 }

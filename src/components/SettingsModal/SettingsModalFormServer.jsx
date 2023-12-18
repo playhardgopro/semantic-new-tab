@@ -3,11 +3,11 @@ import {
   Form, Message, Header, Divider, Icon,
 } from 'semantic-ui-react';
 
-const updateServer = () => {
+function updateServer() {
   const domainName = document.getElementById('serverDomain').value;
   browser.storage.local.set({ faviconServerURL: domainName });
   window.location.reload();
-};
+}
 export default function SettingsModalFormServer() {
   return (
     <Form id="serverForm" onSubmit={updateServer}>
@@ -36,6 +36,7 @@ deployed on&nbsp;
         <a href="https://github.com/mat/besticon">favicon fetcher service</a>
         &nbsp;and replace the domain in the text box above.
       </Message>
+      <Divider />
     </Form>
   );
 }

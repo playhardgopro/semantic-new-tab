@@ -4,20 +4,17 @@ import {
   Form, Label, Header, Divider,
 } from 'semantic-ui-react';
 import SettingsModalFormFolder from './SettingsModalFormFolder';
-// import getAll from '../../helpers';
 
-const updateStyle = () => {
-  const css = document.getElementById('reactCss').value;
-  browser.storage.local.set({ style: css });
-  window.location.reload();
-};
-
+async function updateStyle() {
+  const customCss = document.getElementById('reactCss').value;
+  await browser.storage.local.set({ style: customCss });
+  ReactDOM.render(customCss, document.getElementById('style'));
+}
+// TODO: move this function to it's component
 async function renderBookmarkFolder() {
   const prefs = await browser.storage.local.get();
   document.getElementById('serverDomain').value = prefs.faviconServerURL || 'https://icon-fetcher-go.herokuapp.com';
-  const bookmark = await browser.bookmarks.get(prefs.bookmarkId || 'toolbar_____');
-  // const allItems = await browser.bookmarks.search({});
-  // const allFolders = getAll('folder', allItems);
+  const bookmark = await browser.bookmarks.get(prefs.shownFolderId || 'toolbar_____');
   ReactDOM.render(<SettingsModalFormFolder bookmark={bookmark[0]} />, document.getElementById('bookmark-folder'));
 }
 
@@ -33,7 +30,7 @@ export default class SettingsModalFormStyle extends PureComponent {
 
   render() {
     return (
-      <Form id="styleForm" onSubmit={updateStyle}>
+      <Form id="styleForm">
         <Divider />
         <Header as="h4" content="Custom CSS" />
         <Label pointing="below" content="This CSS will be added as a style tag in the head section of the document." />
@@ -43,7 +40,7 @@ export default class SettingsModalFormStyle extends PureComponent {
           name="reactCss"
           id="reactCss"
         />
-        <Form.Button inverted color="green" type="submit" content="Update" />
+        <Form.Button inverted onClick={updateStyle} color="green" content="Update" />
       </Form>
     );
   }
