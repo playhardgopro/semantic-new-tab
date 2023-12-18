@@ -6,6 +6,7 @@
 	"author": "Daniel Egortsev",
 	"scripts": {
 		"clean": "rm -rf ./build",
+		"dev": "npx nodemon & npx web-ext run -s ./build",
 		"try:pre": "npx web-ext run -s ./build",
 		"try": "npm run build && npm run try:pre",
 		"build": "npm run clean && node ./scripts/build.js",
@@ -13,13 +14,8 @@
 		"xpi": "npm run build && web-ext build -s ./build"
 	},
 	"dependencies": {
-		"@types/firefox-webext-browser": "^82.0.0",
 		"core-js": "^3.8.2",
 		"esbuild": "^0.8.29",
-		"eslint-plugin-compat": "^3.9.0",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-unicorn": "^25.0.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"regenerator-runtime": "^0.13.7",
@@ -32,12 +28,18 @@
 		"@babel/preset-env": "^7.12.11",
 		"@babel/preset-react": "^7.12.10",
 		"@babel/runtime": "^7.12.5",
+		"@types/firefox-webext-browser": "^82.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
 		"@typescript-eslint/eslint-plugin": "^4.11.1",
 		"@typescript-eslint/parser": "^4.11.1",
 		"eslint": "^7.17.0",
-		"eslint-plugin-react": "^7.22.0"
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-compat": "^3.9.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-unicorn": "^25.0.1",
+		"nodemon": "^2.0.7"
 	},
 	"license": "MIT",
 	"repository": {

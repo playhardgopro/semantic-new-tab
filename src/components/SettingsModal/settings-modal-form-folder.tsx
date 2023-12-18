@@ -17,7 +17,7 @@ async function onCreateFolder() {
 			}))
 		}
 
-		const allItems = await browser.bookmarks.search({})
+		const allItems = await browser.bookmarks.search({}) as Bookmark[]
 		const allBookmarks = getAll('bookmark', allItems)
 		createBookmarks(allBookmarks, id)
 	}
