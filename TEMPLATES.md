@@ -18,11 +18,4 @@ body{
 ```
 
 #### Screenshot
-![](https://imgur.com/download/ZoHcl7I)
-
-
-
-
-
-
-
+![](https://imgur.com/download/ralU5hJ)
