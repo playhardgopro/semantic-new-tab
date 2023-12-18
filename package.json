@@ -66,7 +66,7 @@
 	"main": "webpack.config.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playhardgopro/custom-newtab-firefox.git"
+		"url": "git+https://github.com/playhardgopro/semantic-new-tab.git"
 	},
 	"keywords": [
 		"new-tab",
@@ -74,7 +74,7 @@
 		"semantic"
 	],
 	"bugs": {
-		"url": "https://github.com/playhardgopro/custom-newtab-firefox/issues"
+		"url": "https://github.com/playhardgopro/semantic-new-tab/issues"
 	},
-	"homepage": "https://github.com/playhardgopro/custom-newtab-firefox#readme"
+	"homepage": "https://github.com/playhardgopro/semantic-new-tab#readme"
 }

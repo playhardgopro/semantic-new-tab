@@ -6,7 +6,7 @@ export default class Bookmark extends PureComponent {
   render() {
     const { url, title, faviconURL } = this.props;
     return (
-      <a href={url} className="one thumbnail" rel="noopener noreferrer" target="_blank">
+      <a href={url} className="one thumbnail" rel="noopener noreferrer" target="_self">
         <FavIcon faviconURL={faviconURL} title={title} />
       </a>
     );
@@ -14,8 +14,8 @@ export default class Bookmark extends PureComponent {
 }
 
 Bookmark.defaultProps = {
-  title: 'TiTiLe',
-  faviconURL: 'FaViCoN',
+  title: 'Bookmark',
+  faviconURL: 'https://img2.freepng.ru/20180320/ore/kisspng-computer-icons-bookmark-favicon-icon-image-free-bookmark-5ab0c99bb94e37.849385561521535387759.jpg',
 };
 Bookmark.propTypes = {
   url: PropTypes.string.isRequired,

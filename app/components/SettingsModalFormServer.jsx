@@ -20,9 +20,10 @@ class SettingsModalFormServer extends PureComponent {
         <Message
           as="p"
         >
-To serve high quality icons for the bookmarks, I have deployed a&nbsp;
-          <a href="https://github.com/mat/besticon">favicon fetcher service</a>
-&nbsp;deployed on&nbsp;
+To serve high quality icons for the bookmarks, we use&nbsp;
+          <a href="https://icon-fetcher-go.herokuapp.com ">icon-fetcher-go</a>
+&nbsp;
+deployed on&nbsp;
           <a href="https://heroku.com">heroku</a>
 . In case you wish to host it yourself, please follow the instructions provided in the&nbsp;
           <a href="https://github.com/mat/besticon">favicon fetcher service</a>

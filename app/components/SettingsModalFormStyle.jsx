@@ -42,16 +42,15 @@ export default class SettingsModalFormStyle extends PureComponent {
         <Form.Button inverted color="green" type="submit" content="Update" />
         <Message>
           <p>
-Please Note: This CSS will be added as a style tag in the head section of the document.
-          </p>
-          <p>
-To use pre-defined templates, please visit this&nbsp;
+            Note: This CSS will be added as a style tag in the head section of the document.
+            To use pre-defined themes, please visit this&nbsp;
             <a
-              href="https://github.com/ramkumar-kr/react-new-tab-firefox/blob/master/TEMPLATES.md"
+              href="https://github.com/playhardgopro/semantic-new-tab/blob/master/TEMPLATES.md"
               target="_blank"
               rel="noopener noreferrer"
             >
 link
+
             </a>
 .
 
