@@ -1,0 +1,11 @@
+{
+	"manifest_version": 2,
+	"name": "Semantic new tab",
+	"version": "0.1.0",
+	"author": "Daniel Egortsev",
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"description": "Customizable Semantic new tab for Firefox",
+	"permissions": ["bookmarks", "storage"]
+}

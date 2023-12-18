@@ -1,0 +1,97 @@
+body {
+	display: flex;
+	flex-flow: column;
+	background-color: #f9f9fa;
+}
+
+// .container {
+// 	margin: auto;
+// 	padding-left: 10%;
+// 	padding-right: 10%;
+// 	padding-top: 2%;
+// }
+
+// .settings-button {
+// 	display: flex;
+// 	flex-flow: row nowrap;
+// 	justify-content: flex-end;
+// 	width: 100%;
+// }
+
+// .grid {
+// 	display: grid;
+// 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+// 	grid-row-gap: 20px;
+// 	margin: auto;
+// 	padding-top: 2%;
+// }
+.list-flex {
+	display: flex;
+}
+
+.settings-position {
+	display: flex;
+	flex-flow: row-reverse;
+	margin-top: 14px;
+}
+
+.one {
+	margin: 30px;
+	display: block;
+	max-width: 150px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: transform 0.05s;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: #242526;
+	&:hover {
+		color: #242526;
+	}
+	&:visited {
+		color: #242526;
+	}
+}
+
+// 	.thumbnail {
+// 		padding: 4px;
+// 		border: 1px solid #ddd;
+// 		border-radius: 10%;
+// 	}
+
+// 	.one:hover {
+// 		transform: scale(1.2);
+// 	}
+
+// 	.customize {
+// 		display: inline-block;
+// 		color: lightgray;
+// 		grid-area: header;
+// 		text-align: center;
+// 		padding: 8px;
+// 		transition: all 0.4s;
+
+// 		&:hover {
+// 			color: #292a2b;
+// 			transition: all 0.4s;
+// 		}
+// 	}
+// }
+
+// .text {
+// 	overflow: hidden;
+// 	text-overflow: ellipsis;
+// 	white-space: nowrap;
+// 	margin-top: 0;
+// 	text-align: center;
+// 	font-family: Helvetica, sans-serif;
+// }
+
+// #reactCss {
+// 	width: 100%;
+// }
