@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
-import { Form, Message } from 'semantic-ui-react';
+import { Form, Label } from 'semantic-ui-react';
 import SettingsModalFormFolder from './SettingsModalFormFolder';
 
 const updateStyle = () => {
@@ -21,6 +21,7 @@ async function renderBookmarkFolder() {
   const allFolders = getAllFolders(allBookmarks);
   ReactDOM.render(<SettingsModalFormFolder bookmark={bookmark[0]} folders={allFolders} />, document.getElementById('bookmark-folder'));
 }
+
 export default class SettingsModalFormStyle extends PureComponent {
   componentDidMount() {
     renderBookmarkFolder();
@@ -34,28 +35,14 @@ export default class SettingsModalFormStyle extends PureComponent {
   render() {
     return (
       <Form id="styleForm" onSubmit={updateStyle}>
+        <Label pointing="below" content="This CSS will be added as a style tag in the head section of the document." />
         <Form.TextArea
-          placeholder="Enter your Custom CSS here."
+          style={{ minHeight: 300 }}
+          placeholder="Enter CSS here."
           name="reactCss"
           id="reactCss"
         />
         <Form.Button inverted color="green" type="submit" content="Update" />
-        <Message>
-          <p>
-            Note: This CSS will be added as a style tag in the head section of the document.
-            To use pre-defined themes, please visit this&nbsp;
-            <a
-              href="https://github.com/playhardgopro/semantic-new-tab/blob/master/TEMPLATES.md"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-link
-
-            </a>
-.
-
-          </p>
-        </Message>
       </Form>
     );
   }

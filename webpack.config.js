@@ -10,7 +10,7 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
 });
 
 const NewTabHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '/app/index.html'),
+  template: path.join(__dirname, '/src/index.html'),
   filename: path.join(__dirname, '/build/index.html'),
   inject: 'body',
   chunks: ['main'],
@@ -23,7 +23,7 @@ const NewTabHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   {
-    from: path.join(__dirname, '/app/manifest.json'), to: path.join(__dirname, '/build/manifest.json'),
+    from: path.join(__dirname, '/src/manifest.json'), to: path.join(__dirname, '/build/manifest.json'),
   },
 ]);
 
@@ -34,6 +34,7 @@ module.exports = {
     hot: true,
     port: 9000,
   },
+  devtool: 'source-map',
   node: {
     fs: 'empty',
   },
@@ -41,7 +42,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   entry: {
-    main: './app/main.jsx',
+    main: './src/main.jsx',
   },
   output: {
     path: path.join(__dirname, '/build'),
@@ -72,6 +73,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000',
+      },
+
     ],
 
   },

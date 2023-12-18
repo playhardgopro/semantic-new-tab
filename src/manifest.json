@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Semantic new tab",
+	"version": "0.1.2",
+	"author": "Daniil Egortsev",
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"description": "New tab extension for Firefox built with React, Semantic UI and ❤️",
+	"permissions": ["bookmarks", "storage"],
+	"background": {
+		"scripts": ["main.js"]
+	}
+}
