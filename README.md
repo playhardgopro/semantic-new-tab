@@ -1,5 +1,7 @@
 # Semantic New Tab
 
+![https://addons.mozilla.org](https://addons.mozilla.org/ru/firefox/addon/semantic-new-tab/)
+
 ![](https://imgur.com/download/ralU5hJ)
 
 ## Steps to build locally
