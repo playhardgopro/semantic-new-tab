@@ -22,10 +22,9 @@ body {
 	width: 128px;
 	transition: transform 0.1s;
 }
-	.bookmark:hover {
-		transform: scale(1.2);
-	}
-
+.bookmark:hover {
+	transform: scale(1.2);
+}
 
 .bookmark-title {
 	text-overflow: ellipsis;
@@ -36,12 +35,11 @@ a {
 	color: #0b56a1;
 }
 a:hover {
-		color: #05315e;
-	}
+	color: #05315e;
+}
 a:visited {
-		color: #05315e;
-	}
-
+	color: #05315e;
+}
 
 .settings-position {
 	display: flex;

@@ -2,17 +2,17 @@
 
 ## List of themes
 
-- [Semantic New Tab Themes](#semantic-new-tab-themes)
-	- [List of themes](#list-of-themes)
-	- [Background Image](#background-image)
-		- [Code](#code)
-		- [Screenshot](#screenshot)
-	- [Circular bookmark](#circular-bookmark)
-		- [Code](#code-1)
-		- [Screenshot](#screenshot-1)
-	- [Shadows](#shadows)
-		- [Code](#code-2)
-		- [Screenshot](#screenshot-2)
+-   [Semantic New Tab Themes](#semantic-new-tab-themes)
+    -   [List of themes](#list-of-themes)
+    -   [Background Image](#background-image)
+        -   [Code](#code)
+        -   [Screenshot](#screenshot)
+    -   [Circular bookmark](#circular-bookmark)
+        -   [Code](#code-1)
+        -   [Screenshot](#screenshot-1)
+    -   [Shadows](#shadows)
+        -   [Code](#code-2)
+        -   [Screenshot](#screenshot-2)
 
 ## Background Image
 

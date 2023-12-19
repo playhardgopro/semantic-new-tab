@@ -1,25 +1,28 @@
-import * as  React from 'react'
-import {
-	Header, Icon, Modal, Container,
-} from 'semantic-ui-react'
+import * as React from 'react';
+import { Container, Header, Icon, Modal } from 'semantic-ui-react';
 
-import { SettingsModalFormStyle } from './settings-modal-form-style'
-import { SettingsModalFormServer } from './settings-modal-form-server'
-import { SettingsModalThemes } from './settings-modal-themes'
+import { SettingsModalFormServer } from './settings-modal-form-server';
+import { SettingsModalFormStyle } from './settings-modal-form-style';
+import { SettingsModalThemes } from './settings-modal-themes';
 
 export const SettingsModal: React.FC = () => {
 	return (
 		<Modal
-			size="small" trigger={(
+			size="small"
+			trigger={
 				<Icon
-					link name="edit"
-					className="settings-button" size="big"
+					link
+					name="edit"
+					className="settings-button"
+					size="big"
 				/>
-			)}
-			scrolling closeIcon
+			}
+			scrolling
+			closeIcon
 		>
 			<Header
-				as="h2" icon="edit"
+				as="h2"
+				icon="edit"
 				content="Settings"
 			/>
 			<Modal.Content>
@@ -29,12 +32,12 @@ export const SettingsModal: React.FC = () => {
 				<SettingsModalFormServer />
 				<Container textAlign="center">
 					<Modal.Description
-						as="a" href="https://addons.mozilla.org/ru/firefox/addon/semantic-new-tab/"
+						as="a"
+						href="https://addons.mozilla.org/ru/firefox/addon/semantic-new-tab/"
 						content="Click here to visit addons.mozilla.org"
-					>
-					</Modal.Description>
+					></Modal.Description>
 				</Container>
 			</Modal.Content>
 		</Modal>
-	)
-}
+	);
+};

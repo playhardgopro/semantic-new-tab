@@ -1,29 +1,21 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "target": "esnext",
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    }
-  }
+	"compilerOptions": {
+		"strict": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"target": "esnext",
+		"jsx": "react",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"lib": ["esnext", "esnext.asynciterable", "dom"],
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./*"],
+			"@/*": ["./*"]
+		}
+	}
 }

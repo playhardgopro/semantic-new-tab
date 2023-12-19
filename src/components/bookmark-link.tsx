@@ -1,23 +1,30 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { BookmarkIcon } from './bookmark-icon'
-import { Bookmark } from './main-container'
+import { BookmarkIcon } from './bookmark-icon';
+import { Bookmark } from './main-container';
 
 export type BookmarkLinkProps = {
-	url: Bookmark['url']
-	title: Bookmark['title']
-	faviconURL: Bookmark['faviconURL']
-}
+	url: Bookmark['url'];
+	title: Bookmark['title'];
+	faviconURL: Bookmark['faviconURL'];
+};
 
 export const BookmarkLink: React.FC<BookmarkLinkProps> = ({
-	url, title, faviconURL,
+	url,
+	title,
+	faviconURL,
 }) => {
 	return (
 		<a
-			href={url} className="bookmark"
-			rel="noopener noreferrer" target="_self"
+			href={url}
+			className="bookmark"
+			rel="noopener noreferrer"
+			target="_self"
 		>
-			<BookmarkIcon faviconURL={faviconURL} title={title} />
+			<BookmarkIcon
+				faviconURL={faviconURL}
+				title={title}
+			/>
 		</a>
-	)
-}
+	);
+};

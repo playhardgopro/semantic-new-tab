@@ -1,30 +1,35 @@
-import React, { useState } from 'react'
-import { Header, Image, Dimmer } from 'semantic-ui-react'
+import React, { useState } from 'react';
+import { Dimmer, Header, Image } from 'semantic-ui-react';
 
-import { Bookmark } from './main-container'
+import { Bookmark } from './main-container';
 
 interface BookmarkProps {
-	faviconURL: Bookmark['faviconURL']
-	title: Bookmark['title']
+	faviconURL: Bookmark['faviconURL'];
+	title: Bookmark['title'];
 }
 
 export const BookmarkIcon: React.FC<BookmarkProps> = ({
-	faviconURL, title,
+	faviconURL,
+	title,
 }) => {
+	const [active, setActive] = useState(false);
+	const handleShow = () => {
+		setActive(true);
+	};
 
-	const [active, setActive] = useState(false)
-	const handleShow = () => { setActive(true) }
-
-	const handleHide = () => { setActive(false) }
+	const handleHide = () => {
+		setActive(false);
+	};
 
 	const content = (
 		<Header
-			as="h4" className="bookmark-title"
+			as="h4"
+			className="bookmark-title"
 			inverted
 		>
 			{title}
 		</Header>
-	)
+	);
 	return (
 		<Dimmer.Dimmable
 			as={Image}
@@ -38,5 +43,5 @@ export const BookmarkIcon: React.FC<BookmarkProps> = ({
 			size="medium"
 			src={faviconURL}
 		/>
-	)
-}
+	);
+};

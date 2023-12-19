@@ -3,11 +3,11 @@ require('esbuild').buildSync({
 	bundle: true,
 	minify: true,
 	sourcemap: true,
-	target: ['chrome84', 'firefox84', 'safari11', 'edge16'],
+	target: ['chrome84', 'firefox84', 'safari11', 'edge18'],
 	outfile: './build/main.js',
 	define: {
 		'process.env.NODE_ENV': '"production"',
 	},
-})
-require('fs').copyFileSync('./src/manifest.json', './build/manifest.json')
-require('fs').copyFileSync('./src/index.html', './build/index.html')
+});
+require('fs').copyFileSync('./src/manifest.json', './build/manifest.json');
+require('fs').copyFileSync('./src/index.html', './build/index.html');
