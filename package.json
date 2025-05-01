@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"core-js": "^3.34.0",
-		"esbuild": "^0.19.9",
+		"esbuild": "^0.25.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"regenerator-runtime": "^0.14.1",
